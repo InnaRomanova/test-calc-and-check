@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/patterns-for-you/static/css/main.4dcd4c3f.css",
-    "main.js": "/patterns-for-you/static/js/main.88f3ad9c.js",
-    "index.html": "/patterns-for-you/index.html",
-    "main.4dcd4c3f.css.map": "/patterns-for-you/static/css/main.4dcd4c3f.css.map",
-    "main.88f3ad9c.js.map": "/patterns-for-you/static/js/main.88f3ad9c.js.map"
+    "main.css": "/test-calc-and-check/static/css/main.4dcd4c3f.css",
+    "main.js": "/test-calc-and-check/static/js/main.88f3ad9c.js",
+    "index.html": "/test-calc-and-check/index.html",
+    "main.4dcd4c3f.css.map": "/test-calc-and-check/static/css/main.4dcd4c3f.css.map",
+    "main.88f3ad9c.js.map": "/test-calc-and-check/static/js/main.88f3ad9c.js.map"
   },
   "entrypoints": [
     "static/css/main.4dcd4c3f.css",
