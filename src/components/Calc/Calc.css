@@ -1,0 +1,136 @@
+.calculator {
+    margin: 0;
+    padding: 0 0 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.calculator__block {
+    margin: 0;
+    padding: 0;
+    max-width: 551px;
+}
+
+.calculator__title {
+    margin: 0;
+    padding: 0;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 400;
+    margin-bottom: 1em;
+}
+
+.calculator__description {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+.calculator__form {
+    margin: 0;
+    padding: 0;
+}
+
+.calculator__content {
+    box-shadow: 0 0 15px #202020;
+    border-radius: 2em;
+    flex-basis: 300px;
+    box-sizing: border-box;
+    padding: 2em;
+    max-width: 300px;
+}
+
+.calculator__form {}
+
+.calculator__form-parametr {
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: normal;
+    column-gap: normal;
+}
+
+.calculator__form-label {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+.calculator__form-active {
+    flex-basis: 100%;
+}
+
+.calculator__form-input {
+    margin: 0;
+    padding: 0;
+}
+
+.calculator__form-select {
+    background-color: #fafafa;
+    border: 1px solid #514e71;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 700;
+    flex-basis: 150px;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0.6em;
+    width: 150px;
+}
+
+.calculator__form-select:hover {
+    opacity: 0.8;
+}
+
+.calculator__form-select:invalid:focus {
+    background-color: rgba(255, 0, 0, 0.2);
+    border-color: red;
+}
+
+.calculator__form-select:not(:focus) {
+    color: gray;
+}
+
+.calculator__form-option {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+.calculator__form-option:checked {
+    background-color: #514e71;
+    color: #fafafa;
+}
+
+.calculator__button {
+    background-color: #514e71;
+    color: #fafafa;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 700;
+    border: none;
+    display: block;
+    box-sizing: border-box;
+    width: 150px;
+    margin-left: auto;
+    border-radius: 4px;
+    transition: .22s;
+    padding: 0.6em;
+}
+
+.calculator__form-button {}
+
+.calculator__form-result {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    text-align: center;
+    margin: 1em 0 0;
+}
