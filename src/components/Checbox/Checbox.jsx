@@ -15,11 +15,27 @@ function Checbox() {
     const [selectedNumber, setSelectedNumber] = useState(null);
 
     const arrayWork = [
-        { id: 1, numbers: 1 },
-        { id: 2, numbers: 2 },
-        { id: 3, numbers: 3 },
-        { id: 4, numbers: 4 },
-        { id: 5, numbers: 5 },
+        { id: 1, name: "Подготовительные работы 1", link: "Прочитать инструкцию" },
+        { id: 2, name: "Подготовительные работы 2", link: "Прочитать инструкцию" },
+        { id: 3, name: "Подготовительные работы 3", link: "Прочитать инструкцию" },
+        { id: 4, name: "Подготовительные работы 4", link: "Прочитать инструкцию" },
+        { id: 5, name: "Подготовительные работы 5", link: "Прочитать инструкцию" },
+    ]
+
+    const arraySeo = [
+        { id: 1, name: "SEO аналитика 1", link: "Прочитать инструкцию" },
+        { id: 2, name: "SEO аналитика 2", link: "Прочитать инструкцию" },
+        { id: 3, name: "SEO аналитика 3", link: "Прочитать инструкцию" },
+        { id: 4, name: "SEO аналитика 4", link: "Прочитать инструкцию" },
+        { id: 5, name: "SEO аналитика 5", link: "Прочитать инструкцию" },
+    ]
+
+    const arrayStrategi = [
+        { id: 1, name: "Стратегия продвижения 1", link: "Прочитать инструкцию" },
+        { id: 2, name: "Стратегия продвижения 2", link: "Прочитать инструкцию" },
+        { id: 3, name: "Стратегия продвижения 3", link: "Прочитать инструкцию" },
+        { id: 4, name: "Стратегия продвижения 4", link: "Прочитать инструкцию" },
+        { id: 5, name: "Стратегия продвижения 5", link: "Прочитать инструкцию" },
     ]
 
     function handleOpen(listNumber) {
@@ -76,8 +92,8 @@ function Checbox() {
                                 <li key={item.id} className="checboxes__subitem">
                                     <div className="item item__inst">
                                         <input className="checboxes__input" type="checkbox" name={`first${item.id}`} id={`first${item.id}`} />
-                                        <label className="checboxes__label" htmlFor={`first${item.id}`}>Подготовительные работы <span>{item.numbers}</span></label>
-                                        <Link className="checboxes__button" to="https://ru.wikipedia.org/wiki/Заглавная_страница" target="_blank">Прочитать инструкцию</Link>
+                                        <label className="checboxes__label" htmlFor={`first${item.id}`}>{item.name}</label>
+                                        <Link className="checboxes__button" to="https://ru.wikipedia.org/wiki/Заглавная_страница" target="_blank">{item.link}</Link>
                                     </div>
                                 </li>))}
                         </ul>) : ""}
@@ -93,12 +109,12 @@ function Checbox() {
                         </div>
 
                         {openList2 ? (<ul className="checboxes__sublist checkboxes__sublist--hide">
-                            {arrayWork.map((item) => (
+                            {arraySeo.map((item) => (
                                 <li key={item.id} className="checboxes__subitem">
                                     <div className="item item__inst">
                                         <input className="checboxes__input" type="checkbox" name="second1" id="second1" />
-                                        <label className="checboxes__label" htmlFor="second1">SEO аналитика <span>{item.numbers}</span></label>
-                                        <Link className="checboxes__button" to="https://ru.wikipedia.org/wiki/Заглавная_страница" target="_blank">Прочитать инструкцию</Link>
+                                        <label className="checboxes__label" htmlFor="second1">{item.name}</label>
+                                        <Link className="checboxes__button" to="https://ru.wikipedia.org/wiki/Заглавная_страница" target="_blank">{item.link}</Link>
                                     </div>
                                 </li>
                             ))}
@@ -116,12 +132,12 @@ function Checbox() {
                             )}
                         </div>
                         {openList3 ? (<ul className="checboxes__sublist checkboxes__sublist--hide">
-                            {arrayWork.map((item) => (
+                            {arrayStrategi.map((item) => (
                                 <li className="checboxes__subitem" key={item.id}>
                                     <div className="item item__inst">
                                         <input className="checboxes__input" type="checkbox" name="second1" id="second1" />
-                                        <label className="checboxes__label" htmlFor="second1">Стртегия продвижения <span>{item.numbers}</span></label>
-                                        <Link className="checboxes__button">Прочитать инструкцию</Link>
+                                        <label className="checboxes__label" htmlFor="second1">{item.name}</label>
+                                        <Link className="checboxes__button">{item.link}</Link>
                                     </div>
                                 </li>
                             ))}
