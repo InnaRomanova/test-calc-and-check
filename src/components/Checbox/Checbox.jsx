@@ -2,9 +2,6 @@ import "./Checbox.css";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import { ProgressBar } from 'primereact/progressbar';
-// import 'primereact/resources/themes/saga-blue/theme.css';
-// import 'primereact/resources/primereact.min.css';
-// import 'primeicons/primeicons.css';
 
 
 
@@ -13,6 +10,14 @@ function Checbox() {
     const [openList2, setOpenList2] = useState(false);
     const [openList3, setOpenList3] = useState(false);
     const [selectedNumber, setSelectedNumber] = useState(null);
+    const [checked, setChecked] = useState([]);
+    const [expanded, setExpanded] = useState([]);
+	
+	function handleChange() {
+		setChecked(!checked); // инвертируем стейт
+	}
+
+
 
     const arrayWork = [
         { id: 1, name: "Подготовительные работы 1", link: "Прочитать инструкцию" },
@@ -77,9 +82,10 @@ function Checbox() {
             </div>
             <section className="container checboxes">
                 <ul className="checboxes__list">
-                    <li className="checboxes__item">
+                    <li className="checboxes__item" >
                         <div className="item">
-                            <input className="checboxes__input" type="checkbox" name="first" id="first" />
+                            <input className="checboxes__input" type="checkbox" name="first" id="first" 
+                           onChange={handleChange} checked={checked}/>
 
                             {openList1 ? (<> <label className="checboxes__label" htmlFor="first" >Подготовительные работы</label>
                                 <button className="checboxes__button" onClick={() => handleClose(1)}>Скрыть</button></>) : (<>
@@ -91,7 +97,8 @@ function Checbox() {
                             {arrayWork.map((item) => (
                                 <li key={item.id} className="checboxes__subitem">
                                     <div className="item item__inst">
-                                        <input className="checboxes__input" type="checkbox" name={`first${item.id}`} id={`first${item.id}`} />
+                                        <input className="checboxes__input" type="checkbox" name={`first${item.id}`} id={`first${item.id}`} 
+                                         onChange={handleChange} checked={checked}/>
                                         <label className="checboxes__label" htmlFor={`first${item.id}`}>{item.name}</label>
                                         <Link className="checboxes__button" to="https://ru.wikipedia.org/wiki/Заглавная_страница" target="_blank">{item.link}</Link>
                                     </div>
